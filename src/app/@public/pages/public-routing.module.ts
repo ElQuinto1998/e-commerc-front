@@ -18,6 +18,16 @@ const routes: Routes = [
         loadChildren: () =>
           import('./contact/contact.module').then((m) => m.ContactModule),
       },
+      {
+        path: `login`,
+        loadChildren: () =>
+          import('./forms/login/login.module').then((m) => m.LoginModule),
+      },
+      {
+        path: `register`,
+        loadChildren: () =>
+          import('./forms/register/register.module').then((m) => m.RegisterModule),
+      },
     ],
   },
 ];
